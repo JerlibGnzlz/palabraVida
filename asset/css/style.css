@@ -174,28 +174,23 @@ h1 {
     color: #ffffff;
     text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900, 0 0 30px #ff6600;
     animation: fadeIn 2s ease-in-out;
-    /* Animación para aparecer suavemente */
 }
 
 .msg p {
     margin: 0;
     line-height: 1.2;
     animation: glow 1.5s infinite alternate;
-    /* Efecto de resplandor */
 }
 
 .highlight {
     display: inline-block;
     font-size: 40px;
     color: #4cf100;
-    /* Color especial para "accesible" */
     font-weight: 900;
     text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2;
     animation: pop 1.5s infinite alternate;
-    /* Animación única */
 }
 
-/* Animación del texto al aparecer */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -208,7 +203,6 @@ h1 {
     }
 }
 
-/* Animación del resplandor */
 @keyframes glow {
     from {
         text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900, 0 0 30px #ff6600;
@@ -244,4 +238,28 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(203, 65, 65, 0.2);
     margin: 10px auto;
+}
+
+.qr-message {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: parpadeo 1.5s infinite;
+}
+
+/* Animación para parpadeo */
+@keyframes parpadeo {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }

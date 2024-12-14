@@ -48,19 +48,68 @@ btnEnviar.addEventListener("click", function () {
         contenedor.style.display = "flex";
         contenedor.style.flexDirection = "column";
         contenedor.style.alignItems = "center";
-        contenedor.style.width = "80%";
+        contenedor.style.width = "50%";
         contenedor.style.maxWidth = "400px";
 
+        // contenedor.innerHTML = `
+        //     <h3>${citaAleatoria.cita}</h3>
+        //     <p><strong>Versículo:</strong> ${citaAleatoria.texto}</p>
+        //     <p><strong>Lo que quiere decir es:</strong> ${citaAleatoria.parafraseo}</p>
+        //     <img src="${citaAleatoria.imagen}" alt="Imagen Bíblica" style="max-width: 50%; height: auto;">
+        //     <p style="font-size: 0.8rem; font-weight: bold; margin: 5px 0;">
+        // Pastores: Jerlib Gonzalez y Maria de Gonzalez</p>
+        //     <p style="color: green; font-weight: bold;">Esta promesa es para ti, ${nombre.toUpperCase()}.</p>
+        //     <button id="volver" style="margin-top: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        //         Volver al formulario
+        //     </button>
+        // `;
         contenedor.innerHTML = `
-            <h3>${citaAleatoria.cita}</h3>
-            <p><strong>Versículo:</strong> ${citaAleatoria.texto}</p>
-            <p><strong>Lo que quiere decir es:</strong> ${citaAleatoria.parafraseo}</p>
-            <img src="${citaAleatoria.imagen}" alt="Imagen Bíblica" style="max-width: 100%; height: auto;">
-            <p style="color: green; font-weight: bold;">Esta promesa es para ti, ${nombre}.</p>
-            <button id="volver" style="margin-top: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                Volver al formulario
-            </button>
-        `;
+        <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 10px;">${citaAleatoria.cita}</h3>
+        <p style="font-size: 1rem; color: #555; margin: 10px 0;">
+            <strong>Versículo:</strong> ${citaAleatoria.texto}
+        </p>
+        <p style="font-size: 1rem; color: #555; margin: 10px 0;">
+            <strong>Lo que quiere decir es:</strong> ${citaAleatoria.parafraseo}
+        </p>
+        <img 
+            src="${citaAleatoria.imagen}" 
+            alt="Imagen Bíblica" 
+            style="max-width: 80%; height: auto; border-radius: 10px; margin: 20px 0;"
+        >
+        <p style="
+            font-size: 1rem; 
+            font-weight: bold; 
+            margin: 10px 0; 
+            color: #4CAF50; 
+            // text-transform: uppercase; 
+            // letter-spacing: 1px; 
+            text-align: center;
+            background-color: #f0f8e0; 
+            padding: 10px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        ">
+            Pastores: <br> Jerlib Gonzalez y Maria de Gonzalez
+        </p>
+        <p style="color: green; font-weight: bold; font-size: 1.2rem; margin: 15px 0;">
+            Esta promesa es para ti, ${nombre.toUpperCase()}.
+        </p>
+        <button id="volver" style="
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        ">
+            Volver al formulario
+        </button>
+    `;
+
 
         mainContainer.appendChild(contenedor);
 
@@ -70,10 +119,9 @@ btnEnviar.addEventListener("click", function () {
             formContainer.style.display = "block";
         });
     }
-
-
-
 });
+
+
 
 const codigoQRDiv = document.getElementById('codigo-qr');
 const codigoQR = new QRCode(codigoQRDiv, {
