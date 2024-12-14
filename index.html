@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word of Life 24/7</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="shortcut icon" href="./asset/img/ico.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Ga+Maamli&family=Jacquard+12+Charted&family=Lilita+One&family=Nabla&family=Protest+Revolution&family=Sixtyfour+Convergence&family=Yuji+Mai&display=swap');
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"
+        integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+    <h1>
+        Palabra de Vida 24/7
+    </h1>
+
+    <div class="flexbox">
+        <div class="input">
+            <br>
+            <input placeholder="Escribe aqui tu nombre" type="text" name="nombre" id="nombre">
+            <button id="enviar">Enviar</button>
+            <img src="././asset/img/logoCDR.jpg" alt="logo" class="logo">
+        </div>
+
+        <div class="hora">
+            <p>Domingos</p>
+            <p>Hora: 11.30 am</p>
+            <p>Dirección: Thames 656-101</p>
+        </div>
+        <div class="msg">
+            <p>El evangelio</p>
+            <p>nunca fue</p>
+            <span class="highlight">tan accesible.</span>
+        </div>
+
+
+    </div>
+
+
+    <script type="module" src="./asset/javascript/index.js"></script>
+
+
+
+    <div class="codigo-qr" id="codigo-qr"></div>
+
+
+</body>
+
+</html>
