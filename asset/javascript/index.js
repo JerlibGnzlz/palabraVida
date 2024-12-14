@@ -48,7 +48,7 @@ btnEnviar.addEventListener("click", function () {
         contenedor.style.display = "flex";
         contenedor.style.flexDirection = "column";
         contenedor.style.alignItems = "center";
-        contenedor.style.width = "50%";
+        contenedor.style.width = "100%";
         contenedor.style.maxWidth = "400px";
 
         // contenedor.innerHTML = `
